@@ -2,9 +2,9 @@ public class Persona {
     //ATRIBUTOS [MODIFICADOR DE ACCESO] + [TIPO DE DATO] +  [NOMBRE DEL ARTIBUTO] +
     private String nombre;
     private String identificacion;
-    public String nacionalidad;
-    public int edad;
-    public String sexo;
+    private String nacionalidad;
+    private int edad;
+    private String sexo;
     //CONSTRUCTORES
     //[publico] + nombre clase + los argumentos
     //Argumentos metodos (tipo de dato + nombre del argumento)
@@ -28,8 +28,20 @@ public class Persona {
             return false;
         }
     }
-
+    //Geter -> Obtener informacion atributos al mundo exterior.
     public String getNombre(){
         return this.nombre;
+    }
+
+    public String getIdentificacion(){
+        return this.identificacion;
+    }
+
+    public String getNacionalidad(){
+        return  this.nacionalidad;
+    }
+    //seter -? es para cambiar el atributo desde el mundo exterior
+    public void setNacionalidad(String nuevaNacionalidad){
+        this.nacionalidad = nuevaNacionalidad;
     }
 }
